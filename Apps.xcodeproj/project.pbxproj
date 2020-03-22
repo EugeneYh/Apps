@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		442ADB64242806ED0056E6C3 /* HorizontalsnappinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442ADB63242806ED0056E6C3 /* HorizontalsnappinController.swift */; };
+		442ADB6624280DA80056E6C3 /* SnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442ADB6524280DA80056E6C3 /* SnappingLayout.swift */; };
 		444A2EA9241A8DDB00421667 /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A2EA8241A8DDB00421667 /* AppsHorizontalController.swift */; };
 		444A2EAB241ADAFA00421667 /* AppsRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A2EAA241ADAFA00421667 /* AppsRowCell.swift */; };
 		444A2EAD241ADBE900421667 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A2EAC241ADBE900421667 /* Extensions.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		442ADB63242806ED0056E6C3 /* HorizontalsnappinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalsnappinController.swift; sourceTree = "<group>"; };
+		442ADB6524280DA80056E6C3 /* SnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappingLayout.swift; sourceTree = "<group>"; };
 		444A2EA8241A8DDB00421667 /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
 		444A2EAA241ADAFA00421667 /* AppsRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsRowCell.swift; sourceTree = "<group>"; };
 		444A2EAC241ADBE900421667 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				44D7423723C3D3AE000CBE95 /* UIView+Layout.swift */,
 				44D7423A23C3E3D3000CBE95 /* VerticalStackView.swift */,
 				444A2EAC241ADBE900421667 /* Extensions.swift */,
+				442ADB6524280DA80056E6C3 /* SnappingLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				44D7421C23C133CF000CBE95 /* AppDelegate.swift in Sources */,
 				44D7421E23C133CF000CBE95 /* SceneDelegate.swift in Sources */,
 				44D7422023C133CF000CBE95 /* ContentView.swift in Sources */,
+				442ADB6624280DA80056E6C3 /* SnappingLayout.swift in Sources */,
 				44D7423623C3530F000CBE95 /* SearchResultCell.swift in Sources */,
 				44FF5C482422BC3500D7B708 /* AppsGroup.swift in Sources */,
 				444A2EAF241D75E500421667 /* AppsPageHeader.swift in Sources */,
