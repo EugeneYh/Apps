@@ -12,7 +12,7 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     
     let cellId = "celId"
     let headerId = "headerId"
-    var appsGroupResults: AppsGroup?
+    //var appsGroupResults: AppsGroup?
     var groups = [AppsGroup]()
     var socailApps = [SocialApps]()
     
@@ -23,7 +23,6 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         aiv.hidesWhenStopped = true
         return aiv
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +35,6 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     }
     
     fileprivate func fetchData() {
-        
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()
@@ -73,7 +71,6 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
             print("Copleted your dispatch gruop task")
             self.collectionView.reloadData()
             self.activityIndicator.stopAnimating()
-            
         }
     }
     
@@ -98,6 +95,12 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         cell.titleLabel.text = appGroup.feed.title
         cell.horizontalController.appsGroup = appGroup
         cell.horizontalController.collectionView.reloadData()
+        
+        cell.horizontalController.didSelectHandler = { [weak self] app in
+            let appDetailsController = AppDetailsController()
+            appDetailsController.navigationItem.title = app.name
+            self?.navigationController?.pushViewController(appDetailsController, animated: true)
+        }
         return cell
     }
     
