@@ -16,6 +16,7 @@
 		444A2EAF241D75E500421667 /* AppsPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A2EAE241D75E500421667 /* AppsPageHeader.swift */; };
 		444A2EB1241D77C400421667 /* AppsHeaderHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A2EB0241D77C400421667 /* AppsHeaderHorizontalController.swift */; };
 		44650A4F23C532CB00AF73E1 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44650A4E23C532CB00AF73E1 /* Service.swift */; };
+		447A171B242A9B6D0043E9BD /* AppsDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447A171A242A9B6D0043E9BD /* AppsDetailCell.swift */; };
 		44CA1606241984F300B3C14B /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA1605241984F300B3C14B /* AppsGroupCell.swift */; };
 		44D7421C23C133CF000CBE95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D7421B23C133CF000CBE95 /* AppDelegate.swift */; };
 		44D7421E23C133CF000CBE95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D7421D23C133CF000CBE95 /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 		444A2EAE241D75E500421667 /* AppsPageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageHeader.swift; sourceTree = "<group>"; };
 		444A2EB0241D77C400421667 /* AppsHeaderHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderHorizontalController.swift; sourceTree = "<group>"; };
 		44650A4E23C532CB00AF73E1 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		447A171A242A9B6D0043E9BD /* AppsDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsDetailCell.swift; sourceTree = "<group>"; };
 		44CA1605241984F300B3C14B /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 		44D7421823C133CF000CBE95 /* Apps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D7421B23C133CF000CBE95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,9 +102,18 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		447A1719242A9B480043E9BD /* AppsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				447A171A242A9B6D0043E9BD /* AppsDetailCell.swift */,
+			);
+			path = AppsDetail;
+			sourceTree = "<group>";
+		};
 		44CA1604241984D900B3C14B /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				447A1719242A9B480043E9BD /* AppsDetail */,
 				44CA1605241984F300B3C14B /* AppsGroupCell.swift */,
 				444A2EAA241ADAFA00421667 /* AppsRowCell.swift */,
 				444A2EAE241D75E500421667 /* AppsPageHeader.swift */,
@@ -369,6 +380,7 @@
 				44FF5C482422BC3500D7B708 /* AppsGroup.swift in Sources */,
 				444A2EAF241D75E500421667 /* AppsPageHeader.swift in Sources */,
 				44CA1606241984F300B3C14B /* AppsGroupCell.swift in Sources */,
+				447A171B242A9B6D0043E9BD /* AppsDetailCell.swift in Sources */,
 				44D7423B23C3E3D3000CBE95 /* VerticalStackView.swift in Sources */,
 				44D7423823C3D3AE000CBE95 /* UIView+Layout.swift in Sources */,
 				44650A4F23C532CB00AF73E1 /* Service.swift in Sources */,

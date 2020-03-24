@@ -18,5 +18,5 @@ class Feed: Decodable {
 }
 
 class FeedResult: Decodable {
-    let artistName, name, artworkUrl100: String
+    let id, artistName, name, artworkUrl100: String
 }
