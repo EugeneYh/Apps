@@ -8,22 +8,24 @@
 
 import UIKit
 
-class AppDetailsController: BaseListController, UICollectionViewDelegateFlowLayout {
+class AppDetailController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
     
     var appId: String! {
         didSet {
-            if let appId = appId {
-                let urrString = "https://itunes.apple.com/lookup?id=\(appId)"
-                Service.shared.fetchGenericJSONData(urlString: urrString) { (result: SearchResult?, error) in
-                    print(result?.results.first?.releaseNotes)
+            let urlString = "https://itunes.apple.com/lookup?id=\(appId ?? "")"
+            Service.shared.fetchGenericJSONData(urlString: urlString) { (result: SearchResult?, error) in
+                let app = result?.results.first
+                self.app = app
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
                 }
-                print("The app ID is: ", appId)
             }
-            
         }
     }
+    
+    var app: Result?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +40,21 @@ class AppDetailsController: BaseListController, UICollectionViewDelegateFlowLayo
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppsDetailCell
+        cell.app = app
         return cell
     }
     
+    // MARK: setup the dynamic cell size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: 300)
+        let dummyCell = AppsDetailCell(frame: .init(x: 0, y: 0, width: view.frame.width, height: 1000))
+        
+        dummyCell.app = app
+        
+        dummyCell.layoutIfNeeded()
+        
+        let estimatedSize = dummyCell.systemLayoutSizeFitting(.init(width: view.frame.width, height: 1000))
+        
+        return .init(width: view.frame.width, height: estimatedSize.height)
     }
     
 }
