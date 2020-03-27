@@ -68,7 +68,6 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         }
         
         dispatchGroup.notify(queue: .main) {
-            print("Copleted your dispatch gruop task")
             self.collectionView.reloadData()
             self.activityIndicator.stopAnimating()
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppsHeaderHorizontalController: HorizontalsnappinController, UICollectionViewDelegateFlowLayout {
+class AppsHeaderHorizontalController: HorizontalSnappinController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
     var apps = [SocialApps]()

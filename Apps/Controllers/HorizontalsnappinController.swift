@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HorizontalsnappinController: UICollectionViewController {
+class HorizontalSnappinController: UICollectionViewController {
     init() {
         let layout = SnappingLauout()
         layout.scrollDirection = .horizontal

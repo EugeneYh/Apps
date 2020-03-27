@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppsHorizontalController: HorizontalsnappinController, UICollectionViewDelegateFlowLayout {
+class AppsHorizontalController: HorizontalSnappinController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
     let topAndBottomPadding: CGFloat = 12
