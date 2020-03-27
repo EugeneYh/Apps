@@ -34,6 +34,8 @@ class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayo
         setupSearchController()
     }
     
+    
+    
     fileprivate func setupSearchController() {
         definesPresentationContext = true
         navigationItem.searchController = self.searchController

@@ -10,10 +10,22 @@ import UIKit
 
 class ReviewCell: UICollectionViewCell {
     
-    let titleLabel = UILabel(text: "Review Title", font: .boldSystemFont(ofSize: 16))
-    let authorLabel = UILabel(text: "Name SecondName", font: .systemFont(ofSize: 16))
-    let starsLabel = UILabel(text: "Stars", font: .systemFont(ofSize: 14))
-    let bodyLabel = UILabel(text: "Body label", font: .systemFont(ofSize: 14), numberOfLines: 0)
+    let titleLabel = UILabel(text: "Review Title", font: .boldSystemFont(ofSize: 18))
+    let authorLabel = UILabel(text: "Name SecondName", font: .systemFont(ofSize: 18))
+    let stackView: UIStackView = {
+        var arrangedSubviews = [UIView]()
+        (0..<5).forEach { (_) in
+            let imageView = UIImageView(image: #imageLiteral(resourceName: "star"))
+            imageView.constrainWidth(constant: 24)
+            imageView.constrainHeight(constant: 24)
+            arrangedSubviews.append(imageView)
+        }
+        arrangedSubviews.append(UIView())
+        let sv = UIStackView(arrangedSubviews: arrangedSubviews)
+        return sv
+    }()
+    
+    let bodyLabel = UILabel(text: "Body label", font: .systemFont(ofSize: 16), numberOfLines: 5)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,10 +43,10 @@ class ReviewCell: UICollectionViewCell {
         authorLabel.textAlignment = .right
         
         let verticalStackView = VerticalStackView(arangedViews: [
-            topLabelsStackView, starsLabel, bodyLabel], spacing: 10)
+            topLabelsStackView, stackView, bodyLabel], spacing: 10)
         
         addSubview(verticalStackView)
-        verticalStackView.fillSuperview(padding: .init(top: 12, left: 12, bottom: 12, right: 12))
+        verticalStackView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 20, left: 20, bottom: 0, right: 20))
     }
     
     required init?(coder: NSCoder) {
