@@ -35,8 +35,8 @@ class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayo
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let appDetailsController = AppDetailController()
-        appDetailsController.appId = String(searchResults[indexPath.item].trackId)
+        let appIdString = String(searchResults[indexPath.item].trackId)
+        let appDetailsController = AppDetailController(appId: appIdString)
         appDetailsController.collectionView.reloadData()
         navigationController?.pushViewController(appDetailsController, animated: true)
     }
