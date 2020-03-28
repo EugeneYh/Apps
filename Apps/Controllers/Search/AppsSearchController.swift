@@ -34,7 +34,12 @@ class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayo
         setupSearchController()
     }
     
-    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let appDetailsController = AppDetailController()
+        appDetailsController.appId = String(searchResults[indexPath.item].trackId)
+        appDetailsController.collectionView.reloadData()
+        navigationController?.pushViewController(appDetailsController, animated: true)
+    }
     
     fileprivate func setupSearchController() {
         definesPresentationContext = true
