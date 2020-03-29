@@ -23,6 +23,8 @@
 		449927F9242D439B00FE921D /* AppReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449927F8242D439B00FE921D /* AppReviewsController.swift */; };
 		449927FB242E2C2F00FE921D /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449927FA242E2C2F00FE921D /* ReviewCell.swift */; };
 		449927FD242E718300FE921D /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449927FC242E718300FE921D /* Reviews.swift */; };
+		449928002430AAB800FE921D /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449927FF2430AAB800FE921D /* TodayController.swift */; };
+		449928022431370700FE921D /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449928012431370700FE921D /* TodayCell.swift */; };
 		44CA1606241984F300B3C14B /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA1605241984F300B3C14B /* AppsGroupCell.swift */; };
 		44D03F5A242C04E300C3A551 /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D03F59242C04E300C3A551 /* PreviewCell.swift */; };
 		44D7421C23C133CF000CBE95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D7421B23C133CF000CBE95 /* AppDelegate.swift */; };
@@ -62,6 +64,8 @@
 		449927F8242D439B00FE921D /* AppReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewsController.swift; sourceTree = "<group>"; };
 		449927FA242E2C2F00FE921D /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		449927FC242E718300FE921D /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		449927FF2430AAB800FE921D /* TodayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
+		449928012431370700FE921D /* TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
 		44CA1605241984F300B3C14B /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 		44D03F59242C04E300C3A551 /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
 		44D7421823C133CF000CBE95 /* Apps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apps.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,14 @@
 				449927FA242E2C2F00FE921D /* ReviewCell.swift */,
 			);
 			path = AppsDetail;
+			sourceTree = "<group>";
+		};
+		449927FE2430AA9900FE921D /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				449927FF2430AAB800FE921D /* TodayController.swift */,
+			);
+			path = Today;
 			sourceTree = "<group>";
 		};
 		44CA1604241984D900B3C14B /* Apps */ = {
@@ -198,6 +210,7 @@
 		44D7423323C30E96000CBE95 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				449927FE2430AA9900FE921D /* Today */,
 				44DFC76F24182ECB001F1907 /* Search */,
 				44DFC76A24161BB1001F1907 /* Apps */,
 				44D7422F23C13BB4000CBE95 /* BaseTabBarController.swift */,
@@ -212,6 +225,7 @@
 			children = (
 				44CA16072419858400B3C14B /* Search */,
 				44CA1604241984D900B3C14B /* Apps */,
+				449928012431370700FE921D /* TodayCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,6 +408,7 @@
 				44DFC76C2416EC92001F1907 /* AppsPageController.swift in Sources */,
 				444A2EAB241ADAFA00421667 /* AppsRowCell.swift in Sources */,
 				44D7421C23C133CF000CBE95 /* AppDelegate.swift in Sources */,
+				449928002430AAB800FE921D /* TodayController.swift in Sources */,
 				449927F7242D3E3200FE921D /* ReviewRowCell.swift in Sources */,
 				44D7421E23C133CF000CBE95 /* SceneDelegate.swift in Sources */,
 				449927F5242CE03C00FE921D /* PreviewScreenshotsCell.swift in Sources */,
@@ -415,6 +430,7 @@
 				449927FB242E2C2F00FE921D /* ReviewCell.swift in Sources */,
 				442ADB64242806ED0056E6C3 /* HorizontalSnappinController.swift in Sources */,
 				444A2EAD241ADBE900421667 /* Extensions.swift in Sources */,
+				449928022431370700FE921D /* TodayCell.swift in Sources */,
 				44D7423E23C4D180000CBE95 /* SearchResult.swift in Sources */,
 				44FF5C46241D7AB700D7B708 /* AppsHeaderCell.swift in Sources */,
 				44DFC76E2416F0A0001F1907 /* BaseListController.swift in Sources */,
