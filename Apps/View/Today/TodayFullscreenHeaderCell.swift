@@ -10,13 +10,13 @@ import UIKit
 
 class TodayFullscreenHeaderCell: UITableViewCell {
     
-    let headerCell = TodayCell()
+    let todayCell = TodayCell()
     
-    let closeButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "close_button"), for: .normal)
-        return button
-    }()
+//    let closeButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.setImage(#imageLiteral(resourceName: "close_button"), for: .normal)
+//        return button
+//    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,10 +24,11 @@ class TodayFullscreenHeaderCell: UITableViewCell {
     }
     
     fileprivate func setupView() {
-        addSubview(headerCell)
-        addSubview(closeButton)
-        headerCell.fillSuperview()
-        closeButton.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 16), size: .init(width: 80, height: 40))
+        addSubview(todayCell)
+        //addSubview(closeButton)
+        todayCell.fillSuperview()
+        
+//        closeButton.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 44, left: 0, bottom: 0, right: 16), size: .init(width: 80, height: 40))
     }
     
     required init?(coder: NSCoder) {
