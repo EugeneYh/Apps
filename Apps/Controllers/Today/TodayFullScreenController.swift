@@ -42,7 +42,15 @@ class TodayFullScreenController: UIViewController, UITableViewDelegate, UITableV
     }
     
     fileprivate func setupFloatingControls() {
+        let floatingView = FloatingContainerView()
+        floatingView.clipsToBounds = true
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        let bottomPadding = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        //Use the statusBarManager property of the window scene instead.
         
+        // constraint in the view
+        view.addSubview(floatingView)
+        floatingView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 16, bottom: bottomPadding, right: 16), size: .init(width: 0, height: 90))
     }
     
     fileprivate func setupCloseButton() {

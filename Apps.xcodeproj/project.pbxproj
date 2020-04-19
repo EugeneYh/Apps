@@ -15,6 +15,7 @@
 		440416A6243D0C1400244E12 /* MultipleAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440416A5243D0C1400244E12 /* MultipleAppsController.swift */; };
 		440416A82440FA7100244E12 /* BackEnabledNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440416A72440FA7100244E12 /* BackEnabledNavigationController.swift */; };
 		4419631E244B523E00F536F5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4419631D244B523E00F536F5 /* .gitignore */; };
+		44196320244BA01700F536F5 /* FloatingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4419631F244BA01700F536F5 /* FloatingContainerView.swift */; };
 		442ADB64242806ED0056E6C3 /* HorizontalSnappinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442ADB63242806ED0056E6C3 /* HorizontalSnappinController.swift */; };
 		442ADB6624280DA80056E6C3 /* SnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442ADB6524280DA80056E6C3 /* SnappingLayout.swift */; };
 		442ADB6924295C4C0056E6C3 /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442ADB6824295C4C0056E6C3 /* AppDetailController.swift */; };
@@ -66,6 +67,7 @@
 		440416A5243D0C1400244E12 /* MultipleAppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleAppsController.swift; sourceTree = "<group>"; };
 		440416A72440FA7100244E12 /* BackEnabledNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEnabledNavigationController.swift; sourceTree = "<group>"; };
 		4419631D244B523E00F536F5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4419631F244BA01700F536F5 /* FloatingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingContainerView.swift; sourceTree = "<group>"; };
 		442ADB63242806ED0056E6C3 /* HorizontalSnappinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappinController.swift; sourceTree = "<group>"; };
 		442ADB6524280DA80056E6C3 /* SnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappingLayout.swift; sourceTree = "<group>"; };
 		442ADB6824295C4C0056E6C3 /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				44AD642724328CB80029958B /* TodayFullscreenDescriptionCell.swift */,
 				4404169B2433E00F00244E12 /* TodayFullscreenHeaderCell.swift */,
 				440416A3243D094200244E12 /* MultipleAppsCell.swift */,
+				4419631F244BA01700F536F5 /* FloatingContainerView.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				449927F9242D439B00FE921D /* AppReviewsController.swift in Sources */,
 				44D7423223C30E8F000CBE95 /* AppsSearchController.swift in Sources */,
 				444A2EA9241A8DDB00421667 /* AppsHorizontalController.swift in Sources */,
+				44196320244BA01700F536F5 /* FloatingContainerView.swift in Sources */,
 				440416A0243782F800244E12 /* TodayMultipleAppCell.swift in Sources */,
 				440416A82440FA7100244E12 /* BackEnabledNavigationController.swift in Sources */,
 				44AD642824328CB80029958B /* TodayFullscreenDescriptionCell.swift in Sources */,
