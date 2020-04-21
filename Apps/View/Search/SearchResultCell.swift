@@ -18,12 +18,12 @@ class SearchResultCell: UICollectionViewCell {
             
             appImageIco.sd_setImage(with: URL(string: result.artworkUrl100), completed: nil)
             
-            screenShot1ImageView.sd_setImage(with: URL(string: result.screenshotUrls[0]), completed: nil)
-            if result.screenshotUrls.count > 1 {
-                screenShot2ImageView.sd_setImage(with: URL(string: result.screenshotUrls[1]), completed: nil)
+            screenShot1ImageView.sd_setImage(with: URL(string: result.screenshotUrls![0]), completed: nil)
+            if result.screenshotUrls!.count > 1 {
+                screenShot2ImageView.sd_setImage(with: URL(string: result.screenshotUrls![1]), completed: nil)
             }
-            if result.screenshotUrls.count > 2 {
-                screenShot3ImageView.sd_setImage(with: URL(string: result.screenshotUrls[2]), completed: nil)
+            if result.screenshotUrls!.count > 2 {
+                screenShot3ImageView.sd_setImage(with: URL(string: result.screenshotUrls![2]), completed: nil)
             }
         }
     }

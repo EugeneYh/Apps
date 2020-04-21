@@ -13,8 +13,10 @@ class TodayFullScreenController: UIViewController, UITableViewDelegate, UITableV
     var dismissHandler: (()->())?
     var todayItem: TodayItem?
     let height = UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
-    
     let tableView = UITableView(frame: .zero, style: .plain)
+    let floatingContainerView = FloatingContainerView()
+    let floatingContainerViewHeight = 90
+    
     
     let closeButton: UIButton = {
           let button = UIButton(type: .system)
@@ -41,16 +43,23 @@ class TodayFullScreenController: UIViewController, UITableViewDelegate, UITableV
         tableView.contentInset = .init(top: 0, left: 0, bottom: height, right: 0)
     }
     
+    @objc fileprivate func handleTap() {
+           UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
+               self.floatingContainerView.transform = .init(translationX: 0, y: -90)
+           })
+       }
+    
     fileprivate func setupFloatingControls() {
-        let floatingView = FloatingContainerView()
-        floatingView.clipsToBounds = true
-        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
-        let bottomPadding = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
-        //Use the statusBarManager property of the window scene instead.
+        
+        floatingContainerView.clipsToBounds = true
+       
+        
+        // adding gesture recogniser
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         
         // constraint in the view
-        view.addSubview(floatingView)
-        floatingView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 16, bottom: bottomPadding, right: 16), size: .init(width: 0, height: 90))
+        view.addSubview(floatingContainerView)
+        floatingContainerView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 16, bottom: -90, right: 16), size: .init(width: 0, height: floatingContainerViewHeight))
     }
     
     fileprivate func setupCloseButton() {
@@ -64,7 +73,16 @@ class TodayFullScreenController: UIViewController, UITableViewDelegate, UITableV
             scrollView.isScrollEnabled = false
             scrollView.isScrollEnabled = true
         }
-        print(scrollView.contentOffset.y)
+        
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        let bottomPadding = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        let translationY = -90 - bottomPadding
+        
+        let transform = scrollView.contentOffset.y > 100 ? CGAffineTransform(translationX: 0, y: translationY) : .identity
+        
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
+            self.floatingContainerView.transform = transform
+        })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

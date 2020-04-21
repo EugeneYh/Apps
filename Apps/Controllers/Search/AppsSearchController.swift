@@ -50,10 +50,7 @@ class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayo
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-           print(searchText)
-        
         timer?.invalidate()
-        
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
             Service.shared.fetchApp(seacrhTerm: searchText) { (result, err) in
                 self.searchResults = result?.results ?? []
